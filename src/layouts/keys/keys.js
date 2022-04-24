@@ -1,0 +1,368 @@
+const keysB = [
+  {
+    en: '`',
+    enUp: '~',
+    ru: 'ё',
+    ruUp: 'Ё',
+  },
+  {
+    en: '1',
+    enUp: '!',
+    ru: '1',
+    ruUp: '!',
+  },
+  {
+    en: '2',
+    enUp: '@',
+    ru: '2',
+    ruUp: '"',
+  },
+  {
+    en: '3',
+    enUp: '#',
+    ru: '3',
+    ruUp: '№',
+  },
+  {
+    en: '4',
+    enUp: '$',
+    ru: '4',
+    ruUp: ';',
+  },
+  {
+    en: '5',
+    enUp: '%',
+    ru: '5',
+    ruUp: '%',
+  },
+  {
+    en: '6',
+    enUp: '^',
+    ru: '6',
+    ruUp: ':',
+  },
+  {
+    en: '7',
+    enUp: '&',
+    ru: '7',
+    ruUp: '?',
+  },
+  {
+    en: '8',
+    enUp: '*',
+    ru: '8',
+    ruUp: '*',
+  },
+  {
+    en: '9',
+    enUp: '(',
+    ru: '9',
+    ruUp: '(',
+  },
+  {
+    en: '0',
+    enUp: ')',
+    ru: '0',
+    ruUp: ')',
+  },
+  {
+    en: '-',
+    enUp: '_',
+    ru: '-',
+    ruUp: '_',
+  },
+  {
+    en: '=',
+    enUp: '+',
+    ru: '=',
+    ruUp: '+',
+  },
+  {
+    en: 'Backspace',
+    enUp: 'Backspace',
+    ru: 'Backspace',
+    ruUp: 'Backspace',
+  },
+  //   2 row   //
+  {
+    en: 'Tab',
+    enUp: 'Tab',
+    ru: 'Tab',
+    ruUp: 'Tab',
+  },
+  {
+    en: 'q',
+    enUp: 'Q',
+    ru: 'й',
+    ruUp: 'Й',
+  },
+  {
+    en: 'w',
+    enUp: 'W',
+    ru: 'ц',
+    ruUp: 'Ц',
+  },
+  {
+    en: 'e',
+    enUp: 'E',
+    ru: 'у',
+    ruUp: 'У',
+  },
+  {
+    en: 'r',
+    enUp: 'R',
+    ru: 'к',
+    ruUp: 'К',
+  },
+  {
+    en: 't',
+    enUp: 'T',
+    ru: 'е',
+    ruUp: 'Е',
+  },
+  {
+    en: 'y',
+    enUp: 'Y',
+    ru: 'н',
+    ruUp: 'Н',
+  },
+  {
+    en: 'u',
+    enUp: 'U',
+    ru: 'г',
+    ruUp: 'Г',
+  },
+  {
+    en: 'i',
+    enUp: 'I',
+    ru: 'ш',
+    ruUp: 'Ш',
+  },
+  {
+    en: 'o',
+    enUp: 'O',
+    ru: 'щ',
+    ruUp: 'Щ',
+  },
+  {
+    en: 'p',
+    enUp: 'P',
+    ru: 'з',
+    ruUp: 'З',
+  },
+  {
+    en: '[',
+    enUp: '{',
+    ru: 'х',
+    ruUp: 'Х',
+  },
+  {
+    en: ']',
+    enUp: '}',
+    ru: 'ъ',
+    ruUp: 'Ъ',
+  },
+  {
+    en: '\\',
+    enUp: '|',
+    ru: '\\',
+    ruUp: '/',
+  }, {
+    en: 'Del',
+    enUp: 'Del',
+    ru: 'Del',
+    ruUp: 'Del',
+  },
+  //    3 row    //
+  {
+    en: 'CapsLock',
+    enUp: 'CapsLock',
+    ru: 'CapsLock',
+    ruUp: 'CapsLock',
+  }, {
+    en: 'a',
+    enUp: 'A',
+    ru: 'ф',
+    ruUp: 'Ф',
+  }, {
+    en: 's',
+    enUp: 'S',
+    ru: 'ы',
+    ruUp: 'Ы',
+  }, {
+    en: 'd',
+    enUp: 'D',
+    ru: 'в',
+    ruUp: 'В',
+  }, {
+    en: 'f',
+    enUp: 'F',
+    ru: 'a',
+    ruUp: 'A',
+  }, {
+    en: 'g',
+    enUp: 'G',
+    ru: 'п',
+    ruUp: 'П',
+  }, {
+    en: 'h',
+    enUp: 'H',
+    ru: 'р',
+    ruUp: 'Р',
+  }, {
+    en: 'j',
+    enUp: 'J',
+    ru: 'о',
+    ruUp: 'О',
+  }, {
+    en: 'k',
+    enUp: 'K',
+    ru: 'л',
+    ruUp: 'Л',
+  }, {
+    en: 'l',
+    enUp: 'L',
+    ru: 'д',
+    ruUp: 'Д',
+  }, {
+    en: ';',
+    enUp: ':',
+    ru: 'ж',
+    ruUp: 'Ж',
+  }, {
+    en: '\'',
+    enUp: '"',
+    ru: 'э',
+    ruUp: 'Э',
+  }, {
+    en: 'Enter',
+    enUp: 'Enter',
+    ru: 'Enter',
+    ruUp: 'Enter',
+  },
+  //   row 4  //
+  {
+    en: 'Shift',
+    enUp: 'Shift',
+    ru: 'Shift',
+    ruUp: 'Shift',
+  }, {
+    en: 'z',
+    enUp: 'Z',
+    ru: 'я',
+    ruUp: 'Я',
+  }, {
+    en: 'x',
+    enUp: 'X',
+    ru: 'ч',
+    ruUp: 'Ч',
+  }, {
+    en: 'c',
+    enUp: 'C',
+    ru: 'с',
+    ruUp: 'С',
+  }, {
+    en: 'v',
+    enUp: 'V',
+    ru: 'м',
+    ruUp: 'М',
+  }, {
+    en: 'b',
+    enUp: 'B',
+    ru: 'и',
+    ruUp: 'И',
+  }, {
+    en: 'n',
+    enUp: 'N',
+    ru: 'т',
+    ruUp: 'Т',
+  }, {
+    en: 'm',
+    enUp: 'M',
+    ru: 'ь',
+    ruUp: 'Ь',
+  }, {
+    en: ',',
+    enUp: '<',
+    ru: 'б',
+    ruUp: 'Б',
+  }, {
+    en: '.',
+    enUp: '>',
+    ru: 'ю',
+    ruUp: 'Ю',
+  }, {
+    en: '/',
+    enUp: '?',
+    ru: '.',
+    ruUp: ',',
+  }, {
+    en: '▲',
+    enUp: '▲',
+    ru: '▲',
+    ruUp: '▲',
+  }, {
+    en: 'Shift',
+    enUp: 'Shift',
+    ru: 'Shift',
+    ruUp: 'Shift',
+    small: 'Shift',
+  },
+  //   row 5  //
+  {
+    en: 'Ctrl',
+    enUp: 'Ctrl',
+    ru: 'Ctrl',
+    ruUp: 'Ctrl',
+  },
+  {
+    en: 'Win',
+    enUp: 'Win',
+    ru: 'Win',
+    ruUp: 'Win',
+  },
+  {
+    en: 'Alt',
+    enUp: 'Alt',
+    ru: 'Alt',
+    ruUp: 'Alt',
+  },
+  {
+    en: 'Space',
+    enUp: 'Space',
+    ru: 'Space',
+    ruUp: 'Space',
+  },
+  {
+    en: 'Alt',
+    enUp: 'Alt',
+    ru: 'Alt',
+    ruUp: 'Alt',
+  },
+  {
+    en: '◄',
+    enUp: '◄',
+    ru: '◄',
+    ruUp: '◄',
+  },
+  {
+    en: '▼',
+    enUp: '▼',
+    ru: '▼',
+    ruUp: '▼',
+  },
+  {
+    en: '►',
+    enUp: '►',
+    ru: '►',
+    ruUp: '►',
+  },
+  {
+    en: 'Ctrl',
+    enUp: 'Ctrl',
+    ru: 'Ctrl',
+    ruUp: 'Ctrl',
+  },
+];
+
+export default keysB;
