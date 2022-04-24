@@ -10,7 +10,7 @@ const BODY = document.getElementsByTagName('body')[0];
 
 HeaderShow(BODY);
 textAreaShow(BODY);
-keyboardShow(BODY, keysB);
+keyboardShow(BODY, keysB, 'en');
 footerShow(BODY);
 
 focusTextArea();

@@ -1,4 +1,4 @@
-const keyboardShow = (body, keys) => {
+const keyboardShow = (body, keys, lang) => {
   const KEYBOARD = document.createElement('div');
   const arrayKey = ['Ctrl', 'Win', 'Alt', '▲', '◄', '▼', '►'];
   KEYBOARD.classList = 'keyboard';
@@ -28,7 +28,11 @@ const keyboardShow = (body, keys) => {
       key.innerText = el.en;
     } else {
       key.classList = 'keys-letter';
-      key.innerText = el.en;
+      if (lang === 'en') {
+        key.innerText = el.en;
+      } else {
+        key.innerText = el.ru;
+      }
     }
     KEYBOARD.appendChild(key);
   });
