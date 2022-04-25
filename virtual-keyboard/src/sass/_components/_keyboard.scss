@@ -11,3 +11,7 @@
     background-color: $LightBackgroundKeyBoard;
     user-select: none;
 }
+.keyboard-dark{
+    @extend .keyboard;
+    background-color: $DarkBackgroundKeyBoard;
+}

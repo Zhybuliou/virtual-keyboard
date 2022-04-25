@@ -5,12 +5,12 @@ const HeaderShow = (body) => {
   <div class="header-content">
        <p class="title">RSS Virtual keyboard</p>
        <div class="toggle">
-           <p class="toggle-text">dark</p>
+           <p class="toggle-text">light</p>
            <label class="toggle-control">
-               <input type="checkbox" checked="checked">
+               <input type="checkbox" id="toggle-input" >
                <span class="control"></span>
            </label>
-           <p class="toggle-text">light</p>
+           <p class="toggle-text">dark</p>
        </div>
    </div>`;
   body.append(Header);
