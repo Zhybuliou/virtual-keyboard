@@ -14,10 +14,16 @@ keyboardShow(BODY, keysB, language);
 footerShow(BODY);
 
 focusTextArea();
+const toggle = document.querySelector('.toggle-control');
+const inputToggle = document.querySelector('#toggle-input');
 
 document.addEventListener('keydown', (event) => {
   const someKeyDown = document.querySelector(`#${event.code}`);
-  someKeyDown.classList.add('key-Up');
+  if (inputToggle.checked) {
+    someKeyDown.classList.add('key-Up-dark');
+  } else {
+    someKeyDown.classList.add('key-Up');
+  }
   if (event.code === 'Tab') {
     event.preventDefault();
     document.querySelector('#textarea').value += '    ';
@@ -25,7 +31,11 @@ document.addEventListener('keydown', (event) => {
 });
 document.addEventListener('keyup', (event) => {
   const someKeyDown = document.querySelector(`#${event.code}`);
-  someKeyDown.classList.remove('key-Up');
+  if (inputToggle.checked) {
+    someKeyDown.classList.remove('key-Up-dark');
+  } else {
+    someKeyDown.classList.remove('key-Up');
+  }
   focusTextArea();
 });
 const white = ['.keys-letter',
@@ -38,6 +48,7 @@ const white = ['.keys-letter',
   '.keys-40',
   '.keys-space',
   '.keyboard',
+  '.key-Up',
 ];
 const dark = ['.keys-letter-dark',
   '.keys-dark',
@@ -47,9 +58,10 @@ const dark = ['.keys-letter-dark',
   '.keys-100-dark',
   '.keys-86-dark',
   '.keys-40-dark',
-  '.keys-space-dark', '.keyboard-dark'];
-const toggle = document.querySelector('.toggle-control');
-const inputToggle = document.querySelector('#toggle-input');
+  '.keys-space-dark',
+  '.keyboard-dark',
+  '.key-Up-dark'];
+
 toggle.addEventListener('click', () => {
   console.log(inputToggle.checked);
   if (inputToggle.checked) {
