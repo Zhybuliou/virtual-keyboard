@@ -71,3 +71,9 @@
     @extend .keys;
     width: 330px;
 }
+
+.key-Up{
+    border-radius: 25px !important;
+    background-color: $LightAction !important;
+    color: $LightPrimary !important;
+}
