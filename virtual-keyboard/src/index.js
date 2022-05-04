@@ -1,10 +1,10 @@
 import './styles/main.scss';
-import focusTextArea from './utils/focusTextArea';
 import HeaderShow from './layouts/header/header';
 import textAreaShow from './layouts/textarea/textarea';
 import keysB from './layouts/keys/keys';
 import keyboardShow from './layouts/keyboard/keyboard';
 import footerShow from './layouts/footer/footer';
+import clickTextScreen from './utils/clickTextScreen';
 
 const BODY = document.getElementsByTagName('body')[0];
 const language = localStorage.getItem('language');
@@ -13,8 +13,6 @@ HeaderShow(BODY);
 textAreaShow(BODY);
 keyboardShow(BODY, keysB, language);
 footerShow(BODY);
-
-focusTextArea();
 
 const toggle = document.querySelector('.toggle-control');
 const inputToggle = document.querySelector('#toggle-input');
@@ -38,7 +36,6 @@ document.addEventListener('keyup', (event) => {
   } else {
     someKeyDown.classList.remove('key-Up');
   }
-  focusTextArea();
 });
 // end animate typing on keyboard //
 // theme dark and light //
@@ -104,3 +101,12 @@ document.addEventListener('keydown', (zEvent) => {
   }
 });
 // end switch language on keyboard //
+// click typing on screen //
+const KEYBOARD = document.querySelector('.keyboard');
+
+KEYBOARD.addEventListener('click', (event) => {
+  if (event.target.id !== 'keyboard') {
+    clickTextScreen(event);
+  }
+});
+// end click typing on screen //

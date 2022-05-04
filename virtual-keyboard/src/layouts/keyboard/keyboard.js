@@ -2,6 +2,7 @@ const keyboardShow = (body, keys, lang) => {
   const KEYBOARD = document.createElement('div');
   const arrayKey = ['Ctrl', 'Win', 'Alt', '▲', '◄', '▼', '►'];
   KEYBOARD.classList = 'keyboard';
+  KEYBOARD.id = 'keyboard';
   //   64 keys //
   keys.forEach((el) => {
     const key = document.createElement('div');

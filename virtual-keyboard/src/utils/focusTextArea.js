@@ -1,5 +1,6 @@
 export default function focusTextArea() {
   setTimeout(() => {
-    document.getElementById('textarea').focus();
+    const textarea = document.getElementById('textarea');
+    textarea.focus();
   }, 0);
 }
