@@ -7,16 +7,18 @@ import keyboardShow from './layouts/keyboard/keyboard';
 import footerShow from './layouts/footer/footer';
 
 const BODY = document.getElementsByTagName('body')[0];
-const language = 'en';
+const language = localStorage.getItem('language');
+
 HeaderShow(BODY);
 textAreaShow(BODY);
 keyboardShow(BODY, keysB, language);
 footerShow(BODY);
 
 focusTextArea();
+
 const toggle = document.querySelector('.toggle-control');
 const inputToggle = document.querySelector('#toggle-input');
-
+// animate typing on keyboard //
 document.addEventListener('keydown', (event) => {
   const someKeyDown = document.querySelector(`#${event.code}`);
   if (inputToggle.checked) {
@@ -38,6 +40,8 @@ document.addEventListener('keyup', (event) => {
   }
   focusTextArea();
 });
+// end animate typing on keyboard //
+// theme dark and light //
 const white = ['.keys-letter',
   '.keys',
   '.keys-backspace',
@@ -80,3 +84,23 @@ toggle.addEventListener('click', () => {
     });
   }
 });
+// end dark and light theme //
+// switch language on keyboard //
+document.addEventListener('keydown', (zEvent) => {
+  if (zEvent.ctrlKey && zEvent.altKey) {
+    const allKeys = document.querySelectorAll('.keys-letter');
+    if (localStorage.getItem('language') === 'en') {
+      localStorage.setItem('language', 'ru');
+    } else if (localStorage.getItem('language') === 'ru') {
+      localStorage.setItem('language', 'en');
+    }
+    allKeys.forEach((e) => {
+      if (localStorage.getItem('language') === 'en') {
+        e.textContent = e.dataset.en;
+      } else if (localStorage.getItem('language') === 'ru') {
+        e.textContent = e.dataset.ru;
+      }
+    });
+  }
+});
+// end switch language on keyboard //

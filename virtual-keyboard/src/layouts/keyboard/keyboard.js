@@ -36,18 +36,22 @@ const keyboardShow = (body, keys, lang) => {
     } else {
       key.classList = 'keys-letter';
       key.id = el.code;
-      if (lang === 'en') {
-        key.innerText = el.en;
+      key.dataset.ru = el.ru;
+      key.dataset.ruUp = el.ruUp;
+      key.dataset.en = el.en;
+      key.dataset.enUp = el.enUp;
+      if (lang === 'ru') {
+        key.innerText = el.ru;
       } else if (lang === 'enUp') {
         key.innerText = el.enUp;
       } else {
-        key.innerText = el.ru;
+        key.innerText = el.en;
       }
     }
     KEYBOARD.appendChild(key);
   });
 
-  return body.append(KEYBOARD);
+  return body.appendChild(KEYBOARD);
 };
 
 export default keyboardShow;
