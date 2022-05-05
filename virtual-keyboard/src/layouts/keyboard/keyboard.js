@@ -45,8 +45,11 @@ const keyboardShow = (body, keys, lang) => {
         key.innerText = el.ru;
       } else if (lang === 'enUp') {
         key.innerText = el.enUp;
+      } else if (lang === 'ruUp') {
+        key.innerText = el.ruUp;
       } else {
         key.innerText = el.en;
+        localStorage.setItem('language', 'en');
       }
     }
     KEYBOARD.appendChild(key);

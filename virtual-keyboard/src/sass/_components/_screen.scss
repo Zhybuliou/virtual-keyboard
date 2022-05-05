@@ -10,3 +10,8 @@
 
     background-color: $LightPrimary;
 }
+.textarea:focus { 
+    outline: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
+}
