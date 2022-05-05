@@ -114,6 +114,8 @@ KEYBOARD.addEventListener('click', (event) => {
     addBackspace();
   } else if (event.target.id === 'Delete') {
     addDel();
+  } else if (event.target.id === 'Enter') {
+    addSymbolScreen('\n');
   } else if (event.target.id === 'Tab') {
     addSymbolScreen('    ');
   } else if (event.target.id !== 'keyboard') {
