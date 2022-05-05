@@ -5,6 +5,9 @@ import keysB from './layouts/keys/keys';
 import keyboardShow from './layouts/keyboard/keyboard';
 import footerShow from './layouts/footer/footer';
 import clickTextScreen from './utils/clickTextScreen';
+import addSymbolScreen from './utils/addSymbolScreen';
+import addBackspace from './utils/addBackspace';
+import addDel from './utils/addDel';
 
 const BODY = document.getElementsByTagName('body')[0];
 const language = localStorage.getItem('language');
@@ -105,7 +108,15 @@ document.addEventListener('keydown', (zEvent) => {
 const KEYBOARD = document.querySelector('.keyboard');
 
 KEYBOARD.addEventListener('click', (event) => {
-  if (event.target.id !== 'keyboard') {
+  if (event.target.id === 'Space') {
+    addSymbolScreen(' ');
+  } else if (event.target.id === 'Backspace') {
+    addBackspace();
+  } else if (event.target.id === 'Delete') {
+    addDel();
+  } else if (event.target.id === 'Tab') {
+    addSymbolScreen('    ');
+  } else if (event.target.id !== 'keyboard') {
     clickTextScreen(event);
   }
 });
