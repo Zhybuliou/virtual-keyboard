@@ -2,9 +2,9 @@ const eventKey = (addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen
   const inputToggle = document.querySelector('#toggle-input');
 
   document.addEventListener('keydown', (event) => {
+    event.preventDefault();
     const someKeyDown = document.querySelector(`#${event.code}`);
     if (someKeyDown !== null) {
-      event.preventDefault();
       if (event.code === 'Tab') {
         document.querySelector('#textarea').value += '    ';
       } else if (event.code === 'Delete') {

@@ -55,6 +55,7 @@ module.exports = {
       title: 'RSS Virtual Keyboard',
       filename: 'index.html',
       template: 'src/template.html',
+      favicon: 'src/assets/favicon.ico',
     }),
     new ESLintPlugin({ extensions: ['js'] }),
   ],
