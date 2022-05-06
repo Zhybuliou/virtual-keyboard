@@ -10,7 +10,7 @@ const addShift = () => {
   } else if (localStorage.getItem('language') === 'ruUp') {
     localStorage.setItem('language', 'ru');
   }
-  console.log('Shift');
+
   allKeys.forEach((e) => {
     if (localStorage.getItem('language') === 'enUp') {
       e.textContent = e.dataset.enUp;

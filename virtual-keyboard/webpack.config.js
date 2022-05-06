@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
@@ -58,6 +57,5 @@ module.exports = {
       template: 'src/template.html',
     }),
     new ESLintPlugin({ extensions: ['js'] }),
-    // new BundleAnalyzerPlugin(),
   ],
 };
