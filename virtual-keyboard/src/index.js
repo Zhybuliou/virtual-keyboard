@@ -24,7 +24,6 @@ keyboardShow(BODY, keysB, language);
 footerShow(BODY);
 
 theme();
-eventKey(addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen, addShift);
 eventClick(
   addSymbolScreen,
   addCapsLock,
@@ -33,3 +32,4 @@ eventClick(
   clickTextScreen,
   addShift,
 );
+eventKey(addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen, addShift);

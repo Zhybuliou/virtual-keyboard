@@ -873,6 +873,7 @@ var eventKey = function eventKey(addCapsLock, addDel, addBackspace, addSymbolScr
   }, false);
   document.addEventListener('keydown', function (zEvent) {
     if (zEvent.ctrlKey && zEvent.altKey) {
+      document.querySelector('#CapsLock').removeAttribute('style');
       var allKeys = document.querySelectorAll('.keys-letter');
 
       if (!allKeys.length) {
@@ -1624,10 +1625,10 @@ var language = localStorage.getItem('language');
 (0,_layouts_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__["default"])(BODY, _layouts_keys_keys__WEBPACK_IMPORTED_MODULE_3__["default"], language);
 (0,_layouts_footer_footer__WEBPACK_IMPORTED_MODULE_5__["default"])(BODY);
 (0,_layouts_theme_theme__WEBPACK_IMPORTED_MODULE_13__["default"])();
-(0,_utils_eventKey__WEBPACK_IMPORTED_MODULE_14__["default"])(_utils_addCapsLock__WEBPACK_IMPORTED_MODULE_10__["default"], _utils_addDel__WEBPACK_IMPORTED_MODULE_9__["default"], _utils_addBackspace__WEBPACK_IMPORTED_MODULE_8__["default"], _utils_addSymbolScreen__WEBPACK_IMPORTED_MODULE_7__["default"], _utils_textScreen__WEBPACK_IMPORTED_MODULE_11__["default"], _utils_addShift__WEBPACK_IMPORTED_MODULE_12__["default"]);
 (0,_utils_eventClick__WEBPACK_IMPORTED_MODULE_15__["default"])(_utils_addSymbolScreen__WEBPACK_IMPORTED_MODULE_7__["default"], _utils_addCapsLock__WEBPACK_IMPORTED_MODULE_10__["default"], _utils_addBackspace__WEBPACK_IMPORTED_MODULE_8__["default"], _utils_addDel__WEBPACK_IMPORTED_MODULE_9__["default"], _utils_clickTextScreen__WEBPACK_IMPORTED_MODULE_6__["default"], _utils_addShift__WEBPACK_IMPORTED_MODULE_12__["default"]);
+(0,_utils_eventKey__WEBPACK_IMPORTED_MODULE_14__["default"])(_utils_addCapsLock__WEBPACK_IMPORTED_MODULE_10__["default"], _utils_addDel__WEBPACK_IMPORTED_MODULE_9__["default"], _utils_addBackspace__WEBPACK_IMPORTED_MODULE_8__["default"], _utils_addSymbolScreen__WEBPACK_IMPORTED_MODULE_7__["default"], _utils_textScreen__WEBPACK_IMPORTED_MODULE_11__["default"], _utils_addShift__WEBPACK_IMPORTED_MODULE_12__["default"]);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.be652598394acfbf36f7.js.map
+//# sourceMappingURL=bundle.5da7721670851b446026.js.map

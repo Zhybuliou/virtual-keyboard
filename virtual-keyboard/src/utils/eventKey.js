@@ -37,8 +37,10 @@ const eventKey = (addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen
       }
     }
   }, false);
+
   document.addEventListener('keydown', (zEvent) => {
     if (zEvent.ctrlKey && zEvent.altKey) {
+      document.querySelector('#CapsLock').removeAttribute('style');
       let allKeys = document.querySelectorAll('.keys-letter');
       if (!allKeys.length) { allKeys = document.querySelectorAll('.keys-letter-dark'); }
       if (localStorage.getItem('language') === 'en') {
@@ -63,6 +65,7 @@ const eventKey = (addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen
       });
     }
   }, false);
+
   let down = false;
   document.addEventListener('keydown', (event) => {
     if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
@@ -79,6 +82,7 @@ const eventKey = (addCapsLock, addDel, addBackspace, addSymbolScreen, textScreen
       if (document.querySelector('#CapsLock').hasAttribute('style')) { addCapsLock(); }
     }
   }, false);
+
   let capsCount = false;
   document.addEventListener('keydown', (event) => {
     if (event.code === 'CapsLock') {
