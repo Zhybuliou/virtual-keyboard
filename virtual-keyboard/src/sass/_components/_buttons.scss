@@ -1,0 +1,140 @@
+@import "../_fonts/fonts";
+
+.keys-letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 8px;
+
+    background-color: $LightPrimary;
+    color: $LightInk;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+    font-family: $font-stack;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    &:hover{
+        background-color: $LightAction;
+        color: $LightPrimary;
+        transition: 0.2s ease;
+    }
+    &:active{
+        border-radius: 25px;
+        background-color: $LightAction;
+        color: $LightPrimary;
+    }
+}
+
+.keys-letter-dark{
+    @extend .keys-letter;
+    background-color: $DarkPrimary;
+    color: $DarkInk;
+    box-shadow: 0px 1px 0px rgba(255, 254, 254, 0.613);
+    &:hover{
+        background-color: $DarkAction;
+        color: $DarkPrimary;
+        transition: 0.2s ease;
+    }
+    &:active{
+        border-radius: 25px;
+        background-color: $DarkAction;
+        color: $DarkPrimary;
+    }
+}
+
+.keys{
+    @extend .keys-letter;
+    width: 106px;
+    background-color: $LightSecondary;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.keys-dark{
+    @extend .keys-letter-dark;
+    width: 106px;
+    background-color: $DarkSecondary;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.keys-backspace{
+    @extend .keys;
+    width: 100px;
+}
+.keys-backspace-dark{
+    @extend .keys-dark;
+    width: 100px;
+}
+.keys-tab{
+    @extend .keys;
+    width: 50px;
+}
+.keys-tab-dark{
+    @extend .keys-dark;
+    width: 50px;
+}
+.keys-del{
+    @extend .keys;
+    width: 44px;
+}
+.keys-del-dark{
+    @extend .keys-dark;
+    width: 44px;
+}
+.keys-100{
+    @extend .keys;
+    width: 100px;
+}
+.keys-100-dark{
+    @extend .keys-dark;
+    width: 100px;
+}
+.keys-86{
+    @extend .keys;
+    width: 86px;
+}
+.keys-86-dark{
+    @extend .keys-dark;
+    width: 86px;
+}
+.keys-40{
+    @extend .keys;
+    width: 40px;
+}
+.keys-40-dark{
+    @extend .keys-dark;
+    width: 40px;
+}
+.keys-space{
+    @extend .keys;
+    width: 330px;
+}
+.keys-space-dark{
+    @extend .keys-dark;
+    width: 330px;
+}
+
+.key-Up{
+    border-radius: 25px !important;
+    background-color: $LightAction !important;
+    color: $LightPrimary !important;
+}
+.key-Up-dark{
+    border-radius: 25px !important;
+    background-color: $DarkAction !important;
+    color: $DarkPrimary !important;
+}

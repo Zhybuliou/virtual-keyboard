@@ -1,0 +1,8 @@
+*.*~
+
+.vscode
+.vs
+.idea
+
+# Dependency directories
+node_modules/

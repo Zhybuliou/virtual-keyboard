@@ -1,0 +1,17 @@
+
+.keyboard{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 704px;
+
+    margin: 0 auto;
+    padding: 5px;
+
+    background-color: $LightBackgroundKeyBoard;
+    user-select: none;
+}
+.keyboard-dark{
+    @extend .keyboard;
+    background-color: $DarkBackgroundKeyBoard;
+}
